@@ -141,7 +141,7 @@ RUN /etc/init.d/mysql start && \
 	# As long as it is not fixed, only enable simpletest and devel.
 	# drush en -y admin_menu simpletest devel
 	drush en -y simpletest devel && \
-	drush en -y bartik \
+	drush en -y bartik && \
 	drush en -y bootstrap
 RUN /etc/init.d/mysql start && \
 	cd /var/www && \

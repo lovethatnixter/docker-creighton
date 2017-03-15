@@ -154,8 +154,8 @@ RUN /etc/init.d/mysql start && \
 RUN /etc/init.d/mysql start && \
 	cd /var/www && \
 	#### drush cset system.theme default 'bartik' -y
-	drush cset system.theme default 'bootstrap' -y && \
-	drush vset admin_theme adminimal_theme
+	drush cset system.theme default 'bootstrap' -y
+	## drush vset admin_theme adminimal_theme
 
 EXPOSE 80 3306 22 443
 CMD exec supervisord -n

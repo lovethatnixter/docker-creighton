@@ -136,13 +136,13 @@ RUN /etc/init.d/mysql start && \
 	# Admin Menu is broken. See https://www.drupal.org/node/2563867 for more info.
 	# As long as it is not fixed, only enable simpletest and devel.
 	# drush en -y admin_menu simpletest devel
-    drush en -y simpletest && \
+    ##drush en -y  simpletest && \
 	drush en -y devel && \
 	drush en -y bartik && \
 	
     ######## Creighton Univerisity Additional modules.
 	## Enable Core Modules
-	drush en -y actions views views_ui && \
+	drush en -y actions views* && \
 	##drush dl state_machine-8.1.0-beta3 \
 
 	## Download and Enable Contrib Modules

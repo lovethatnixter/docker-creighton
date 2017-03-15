@@ -139,12 +139,12 @@ RUN /etc/init.d/mysql start && \
     ##drush en -y  simpletest && \
 	drush en -y devel && \
 	drush en -y bartik && \
-	
+	##
     ######## Creighton Univerisity Additional modules.
 	## Enable Core Modules
 	drush en -y actions views && \
 	##drush dl state_machine-8.1.0-beta3 \
-
+    ##
 	## Download and Enable Contrib Modules
 	drush en -y workflow && \
 	drush en -y adminimal_theme && \

@@ -133,7 +133,7 @@ RUN /etc/init.d/mysql start && \
 	drush dl admin_menu devel && \
 	######## Creighton Univerisity Additional modules.
 	drush dl state_machine-8.1.0-beta3 \
-	drush dl bootstrap-8.3.2
+	drush dl bootstrap-8.3.2 \
 	##################################################
 	# In order to enable Simpletest, we need to download PHPUnit.
 	composer install --dev && \

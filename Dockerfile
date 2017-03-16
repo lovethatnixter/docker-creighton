@@ -150,6 +150,7 @@ RUN /etc/init.d/mysql start && \
 	##drush dl state_machine-8.1.0-beta3 \
     ##
 	## Download and Enable Contrib Modules
+	drush en -y features && \ 
 	drush en -y workflow && \
 	drush en -y adminimal_theme && \
 	drush en -y bootstrap
@@ -158,7 +159,7 @@ RUN /etc/init.d/mysql start && \
 RUN /etc/init.d/mysql start && \
 	cd /var/www && \
 	#### drush cset system.theme default 'bartik' -y
-	drush config-set system.theme admin adminimal_theme && \
+	drush config-set system.theme admin adminimal_theme -y && \
 	drush cset system.theme default 'bootstrap' -y
 
 EXPOSE 80 3306 22 443

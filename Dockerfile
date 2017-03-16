@@ -143,7 +143,7 @@ RUN /etc/init.d/mysql start && \
     ######## Creighton Univerisity Additional modules.
 	## Enable Core Modules
 	drush en -y toolbar && \
-	drush en -y field field_ui && \
+	#drush en -y field field_ui && \
 	#drush en -y actions && \
 	#drush en -y views && \
 	##drush dl state_machine-8.1.0-beta3 \

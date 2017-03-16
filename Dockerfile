@@ -147,6 +147,8 @@ RUN /etc/init.d/mysql start && \
 	##drush dl state_machine-8.1.0-beta3 \
     ##
 	## Download and Enable Contrib Modules
+	drush en -y hal && \
+	drush en -y field_ui && \
 	drush en -y views && \
 	drush en -y views_ui && \
 	drush en -y features && \ 

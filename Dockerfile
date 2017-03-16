@@ -143,6 +143,7 @@ RUN /etc/init.d/mysql start && \
     ######## Creighton Univerisity Additional modules.
 	## Enable Core Modules
 	drush en -y toolbar && \
+	drush en -y content_moderation && \
 	#drush en -y field field_ui && \
 	#drush en -y actions && \
 	#drush en -y views && \
@@ -151,14 +152,14 @@ RUN /etc/init.d/mysql start && \
 	## Download and Enable Contrib Modules
 	drush en -y workflow && \
 	drush en -y adminimal_theme && \
-	drush en -y bootstrap
+	drush en -y bootstrap && \
+	drush vset admin_theme adminimal_theme
 	##################################################
 
 RUN /etc/init.d/mysql start && \
 	cd /var/www && \
 	#### drush cset system.theme default 'bartik' -y
 	drush cset system.theme default 'bootstrap' -y
-	## drush vset admin_theme adminimal_theme
 
 EXPOSE 80 3306 22 443
 CMD exec supervisord -n

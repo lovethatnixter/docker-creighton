@@ -150,8 +150,9 @@ RUN /etc/init.d/mysql start && \
 	##drush dl state_machine-8.1.0-beta3 \
     ##
 	## Download and Enable Contrib Modules
+	drush en -y views views_ui && \
 	drush en -y features && \ 
-	drush en -y workflow && \
+	drush en -y workflow workflow_ui && \
 	drush en -y adminimal_theme && \
 	drush en -y bootstrap
 	##################################################

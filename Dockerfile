@@ -142,7 +142,8 @@ RUN /etc/init.d/mysql start && \
 	##
     ######## Creighton Univerisity Additional modules.
 	## Enable Core Modules
-	drush en -y actions views
+	drush en -y actions && \
+	drush en -y views && \
 	##drush dl state_machine-8.1.0-beta3 \
     ##
 	## Download and Enable Contrib Modules

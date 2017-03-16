@@ -158,7 +158,7 @@ RUN /etc/init.d/mysql start && \
 RUN /etc/init.d/mysql start && \
 	cd /var/www && \
 	#### drush cset system.theme default 'bartik' -y
-	drush cset system.admin_theme 'adminimal_theme' -y && \
+	drush config-set system.theme admin adminimal_theme && \
 	drush cset system.theme default 'bootstrap' -y
 
 EXPOSE 80 3306 22 443
